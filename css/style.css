@@ -10,11 +10,32 @@ html, body {
 	box-sizing: border-box;
 }
 
+/**
+Edited header with color of font and the header color.
+ */
+
 header {
 	color: lime;
 	background-color: black;
-	text-align: center;
 }
+
+/**
+Edited the header so the inline block would take the background color to the top of the screen and
+margin-right moved the text out from under Dylan to the right of it.
+ */
+
+header h1 {
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+/**
+Welcome section
+Edited the instructions section to include border style, text alignment, and padding
+to clean up the section. Flex start starts the flex from the beginning and goes to the right. Padding
+gives some white space between the border and the content. Try using rems most of all because it is more
+compatible with all different kinds of screens.
+ */
 
 .instructions-wrapper {
 	padding: 25px;
@@ -25,32 +46,80 @@ header {
 	text-align: left;
 }
 
+/**
+Editing the image in the instructions wrapper section. Width is the overall width of the image.
+ */
+
 .instructions-wrapper img {
 	width: 250px;
 	margin-left: 400px;
 }
 
+.instructions-content {
+	flex: 1;
+	padding-right: 2rem;
+}
+
+/*
+Moves the text within the wrapper in the h2 tag up from the border. It centers the text more.
+ */
+.instructions-content h2 {
+	margin-top: 0;
+}
+
+/*
+About me section
+In the about me section, changed the background color to blue, text color to white, aligned the text to the left
+next to the image, and put some padding to make it more center.
+ */
 
 .about-me {
 	background-color: blue;
 	padding: 50px;
+	color: white;
+	text-align: left;
 }
+
+/*
+Editing the about me picture - edited the width of the picture, margin-right pushes the text away from the picture,
+floating is what floats the picture to the left of the text. When editing the border picture style define the color but
+you also have to define the size of the border, and solid just adds a little bit of depth.
+ */
 
 .about-me img{
 	width: 250px;
 	margin-right: 2rem;
 	float: left;
-	border: white;
+	border: 3px solid white;
 }
+
+/*
+Editing the table section
+You select the section tab and nth child is selecting whatever is inside the section. So when you pick the 4th child
+you are referring to the 4th section tab in the project. Aligned the header text to to the right. Each child does not
+have to have the same name. Parent is sfooter-content, header is first child, instructions
+is the second child, about me is the third child, skillz is the 4th child, and so on.
+ */
 
 section:nth-child(4) h2 {
 	text-align: right;
 }
 
+/*
+Edited the table of the skillz section
+Added a width to the table over the whole span of the screen. Changed the color of the text to be green. You can
+measure it out in pixels or if you use 100% it will span across the screen.
+ */
+
 section:nth-child(4) table {
 	width: 1500px;
 	color: lime;
 }
+
+/*
+Edited the table data to change the actual table rows color, aligned the text to the left, and put some padding
+in the rows of 15px to give each box in the table a little bit more spacing.
+ */
 
 section:nth-child(4) table td {
 	background-color: dimgray;
@@ -58,44 +127,101 @@ section:nth-child(4) table td {
 	text-align: left;
 }
 
+/*
+Did a similar command for the table header, the top row of the table, as I did for the table data.
+You can reference the specific sections of the table such as th=table header, td=table data.
+ */
+
 section:nth-child(4) table th {
 	background-color: dimgray;
 	padding: 15px;
 	text-align: left;
 }
 
+/*
+Added some padding to the bottom of the table to give it a little more spacing between the skillz and contact section.
+ */
+
 .container table {
 	padding-bottom: 50px;
 }
 
+/*
+Contact me section
+Changed the background color of the section to green and changed the text color to lime.
+Padding is inside of the margin. Use trial and error to see which is the most appropriate to change.
+ */
+
 .form-wrapper {
 	background-color: green;
 	padding: 50px;
-	width: 750px;
+	width: 1400px;
 	color: lime;
 }
 
+/*
+Edited the header of the contact section to align the the left. Added a margin top 0 to reduce the space in between the
+header and the top of the form wrapper class element(the green box).
+ */
+
 .form-wrapper h2 {
 	text-align: left;
+	margin-top: 0;
 }
+
+/*
+Changing the label and creating it as a block element, takes up the whole line and pushes the next element down
+to another row. Aligned the text to the left. Added padding the labels to add a little space in between the boxes.
+ */
 
 input, label {
 	display: block;
 	text-align: left;
+	padding: 8px;
 }
+
+/*
+Moved the text are box to the left as well. Using the display block will align it with the other elements in the section.
+Adding the padding to the text area sections increases the box sizes where you can insert text.
+ */
 
 input, textarea {
 	display: block;
+	padding: 8px;
 }
 
+/*
+Stylized the buttons to have a background color, change the font style and size, took away the border, and added some
+padding to make the buttons a little larger in size.
+ */
 
 button {
 	background-color: lime;
+	font-weight: bold;
+	border: none;
+	padding: 10px 31px;
+	font-size: 1rem;
 }
+
+/*
+Added some margin space between the buttons and the 4nth child of the form div tags.
+ */
+
+form div:nthchild (4) {
+	margin-bottom: 15px;
+}
+
+/*
+Referencing the last child in the section, the contact section, you can change the background color of it specifically.
+ */
 
 div.sfooter-content section:last-child {
 	background-color: dimgray;
 }
+
+/*
+Edited the footer to include a background color of black, text of white. and align the text in the center of the page.
+ */
 
 footer{
 	background-color: black;
